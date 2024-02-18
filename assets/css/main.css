@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap');
+
+body {
+    font-family: Inter;
+}
+
+::selection {
+    background-color: black;
+    color: white;
+}
+
+.glass-box {
+    background-color: #f2f2f2bf;
+    border: solid #2b2b2b 1px;
+    border-radius: 16px;
+}
+
+.navbar {
+    width: 35vw;
+    max-width: 680px;
+    min-width: 543px;
+    height: 60px;
+    display: block;
+    display: flex;
+    /* margin: 30px auto 0px auto; */
+    padding: 0px 26px 0px 30px;
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.navbar__item {
+    font-size: 1.2em;
+}
+
+.navbar__group {
+    display: flex;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: inline-flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar__group:first-child {
+    /* background-color: green; */
+    flex: 3;
+    /* justify-content: space-between; */
+    justify-content: flex-start;
+    /* text-align: left; */
+    /* width: 60%; */
+}
+
+.navbar__group:last-child {
+    /* background-color: yellow; */
+    flex: 2;
+    justify-content: flex-end;
+    text-align: right;
+    /* width: 30%; */
+}
+
+.navbar__group:last-child .navbar__item {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__item--arrow::after {
+    content: url("../icons/caret-down.svg");
+    display: inline-block;
+    transform: scale(0.5, 0.6);
+    margin-right: -8px;
+    margin-left: -5px;
+    /* position: absolute;
+    top: -7px;
+    right: -30px; */
+}
+
+.hero {
+    display: flex;
+    width: 75vw;
+    height: 100vh;
+    max-width: 1920px;
+    /* background-color: red; */
+    margin: auto;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.hero__intro {
+    width: 25vw;
+    height: 138px;
+    position: relative;
+}
+
+.hero__intro::before {
+    content: " ";
+    width: 10px;
+    height: 100%;
+    background-color: black;
+    display: inline-block;
+    position: absolute;
+    left: -20px;
+    border-radius: 10px;
+}
+
+.hero__advantages {
+    width: 25vw;
+    font-size: 1.2em;
+    padding: 0px;
+}
