@@ -77,6 +77,10 @@ body {
     right: -30px; */
 }
 
+.navbar__item--arrow:nth-child(2):hover {
+    background: red;
+}
+
 .hero {
     display: flex;
     width: 75vw;
@@ -89,17 +93,19 @@ body {
 }
 
 .hero__intro {
-    width: 25vw;
+    width: fit-content;
     height: 138px;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-right: 45px;
     padding: 5px 0px;
 }
 
 .hero__advantages {
-    width: 25vw;
+    /* width: 25vw; */
+    min-width: fit-content;
     font-size: 1.3em;
     padding: 0px;
 }
@@ -164,6 +170,7 @@ body {
     flex-direction: column;
     gap: 8px;
     font-size: 1.1em;
+    padding: 10px 60px;
 }
 
 .advantages__item::before {
@@ -189,4 +196,18 @@ body {
 .advantages__item {
     position: relative;
     top: -10px;
+}
+
+.links {
+    width: 200px;
+    padding: 40px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    list-style: none;
+    position: fixed;
+}
+
+.links__item::before {
+    icon()
 }
