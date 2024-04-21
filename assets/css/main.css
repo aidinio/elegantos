@@ -42,6 +42,7 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 25px;
+    position: relative;
 }
 
 .navbar__group:first-child {
@@ -53,15 +54,16 @@ body {
     /* width: 60%; */
 }
 
-.navbar__group:last-child {
+.navbar__group:nth-child(2) {
     /* background-color: yellow; */
     flex: 2;
     justify-content: flex-end;
     text-align: right;
     /* width: 30%; */
+    position: relative;
 }
 
-.navbar__group:last-child .navbar__item {
+.navbar__group:nth-child(2) .navbar__item {
     display: flex;
     align-items: center;
 }
@@ -99,7 +101,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-right: 45px;
+    margin-right: 45fpx;
     padding: 5px 0px;
 }
 
@@ -200,14 +202,60 @@ body {
 
 .links {
     width: 200px;
-    padding: 40px 30px;
+    height: 100px;
+    padding: 20px 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr; */
+    grid-template-rows: 30px 30px 30px;
     list-style: none;
     position: fixed;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    right: 00px;
+}
+
+.links__item:nth-child(1)::before {
+    content: url("../icons/github-logo.svg")
+}
+
+.links__item:nth-child(2)::before {
+    content: url("../icons/instagram-logo.svg")
+}
+
+.links__item:nth-child(3)::before {
+    content: url("../icons/gitlab-logo.svg")
+}
+
+.links__item:nth-child(4)::before {
+    content: url("../icons/youtube-logo.svg")
+}
+
+.links__item:nth-child(5)::before {
+    content: url("../icons/x.svg")
+}
+
+.links__item:nth-child(6)::before {
+    content: url("../icons/discord-logo.svg")
 }
 
 .links__item::before {
-    icon()
+    display: inline-block;
+    transform: scale(0.6);
+    position: relative;
+    top: 10px;
+    margin-right: 9px;
+    margin: 0px;
+}
+
+.links__item {
+    position: relative;
+    top: -5px;
+}
+
+.links__item a {
+    text-decoration: none;
+    color: #000;
 }
