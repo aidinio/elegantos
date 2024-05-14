@@ -274,20 +274,53 @@ body {
     margin: 0 0 -130px 0;
 }
 
+.wiki {
+    width: 100vw;
+    height: 100vh;
+}
+
+.wiki__container {
+    display: flex;
+    gap: 80px;
+    width: 100vw;
+    display: flex;
+    overflow-x: scroll;
+    justify-content: center;
+    align-items: center;
+}
+
 .box--wiki {
-    width: 200px;
+    width: 210px;
     height: 250px;
-    padding: 30px;
+    padding: 35px;
     display: inline-block;
-    margin: 0 30px 0 30px;
+    margin: 0;
+    display: inline-grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
 }
 
 .box--wiki__title {
     text-align: center;
-    margin-bottom: 60px;
+    /* margin-bottom: 60px; */
+    margin: 0;
+    padding: 0;
 }
 
 .box--wiki__button {
     height: auto;
-    padding: 0px;
+    width: 105px;
+    padding: 1px;
+    margin: 0;
+    text-align: center;
+    justify-self: center;
+
+}
+
+.box--wiki__text {
+    padding: 0;
+    margin: 0;
+    line-height: 1.5rem;
 }
