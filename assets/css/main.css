@@ -9,10 +9,11 @@ body {
     color: white;
 }
 
-.glass-box {
+.box {
     background-color: #f2f2f2bf;
     border: solid #2b2b2b 1px;
     border-radius: 16px;
+    backdrop-filter: blur(10px);
 }
 
 .navbar {
@@ -28,10 +29,11 @@ body {
     top: 40px;
     left: 50%;
     transform: translate(-50%);
+    z-index: 1;
 }
 
 .navbar__item {
-    font-size: 1.1em;
+    font-size: 1.0em;
 }
 
 .navbar__group {
@@ -101,37 +103,39 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-right: 45fpx;
     padding: 5px 0px;
+    box-sizing: border-box;
 }
 
-.hero__advantages {
+.box--features {
     /* width: 25vw; */
     min-width: fit-content;
-    font-size: 1.3em;
+    font-size: 1.2em;
     padding: 0px;
 }
 
 .intro__heading {
     font-weight: 900;
-    font-size: 3em;
+    font-size: 2.5em;
     margin: 0px;
 }
 
 .intro__slogan {
     margin: 0px;
     padding: 0px;
-    font-size: 1.5em;
+    font-size: 1.4em;
     justify-self: center;
     margin-top: -7px;
 }
 
-.intro__button_pair {
-    margin: 0px;
-    margin-bottom: -7px;
+.button_pair {
+    /* margin: 0px;
+    margin-bottom: -7px; */
+    /* margin-top: 10px; */
+    padding-top: 10px;
 }
 
-.intro__button {
+.button {
     border: solid black 2px;
     border-radius: 16px;
     width: 100px;
@@ -145,11 +149,11 @@ body {
     /* padding: auto; */
 }
 
-.intro__button:nth-child(1) {
+.button:nth-child(1) {
     margin-right: 20px;
 }
 
-.intro__button--dark {
+.button--dark {
     background-color: #2b2b2b;
     border-color: #2b2b2b;
     color: #fff;
@@ -164,7 +168,7 @@ body {
     position: absolute;
     left: -30px;
     border-radius: 10px;
-    top: 4px;
+    /* top: 4px; */
 }
 .advantages__group {
     list-style: none;
@@ -215,7 +219,9 @@ body {
     position: absolute;
     top: 50px;
     right: 00px;
+    display: none;
 }
+
 
 .links__item:nth-child(1)::before {
     content: url("../icons/github-logo.svg")
@@ -258,4 +264,30 @@ body {
 .links__item a {
     text-decoration: none;
     color: #000;
+}
+
+.wiki__title {
+    font-size: 25rem;
+    display: block;
+    text-align: center;
+    font-weight: 900;
+    margin: 0 0 -130px 0;
+}
+
+.box--wiki {
+    width: 200px;
+    height: 250px;
+    padding: 30px;
+    display: inline-block;
+    margin: 0 30px 0 30px;
+}
+
+.box--wiki__title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.box--wiki__button {
+    height: auto;
+    padding: 0px;
 }
