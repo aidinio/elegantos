@@ -2,6 +2,12 @@
 
 body {
     font-family: Inter;
+    font-size: 1rem;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
 }
 
 ::selection {
@@ -266,8 +272,9 @@ body {
     color: #000;
 }
 
-.wiki__title {
-    font-size: 25rem;
+.section__title {
+    font-size: 17rem;
+    font-stretch: 200%;
     display: block;
     text-align: center;
     font-weight: 900;
@@ -323,4 +330,102 @@ body {
     padding: 0;
     margin: 0;
     line-height: 1.5rem;
+}
+
+.box--news {
+    width: 400px;
+    height: 210px;
+    padding: 30px;
+    display: inline-grid;
+    box-sizing: border-box;
+    grid-template-areas:
+    "title text"
+    "button text";
+    gap: 10px;
+    grid-template-columns: 1fr 1.1fr;
+    grid-template-rows: 1fr 1fr;
+    flex: 0 0 auto;
+}
+
+.box--news__title {
+    grid-area: title;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 120%;
+    margin: 0px 0 0 0;
+    align-self: center;
+}
+
+.box--news__text {
+    margin: 0;
+    padding: 0;
+    grid-area: text;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-left: 10px;
+    overflow: scroll;
+}
+
+.box--news__button {
+    width: auto;
+    grid-area: button;
+    align-self: center;
+    /* margin: 0 10px 0 10px; */
+}
+
+.news__container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-basis: 390px;
+    gap: 40px;
+    overflow-x: scroll;
+    justify-content: center;
+    align-items: center;
+}
+
+.news {
+    height: 100vh;
+}
+
+.contribution__container {
+    display: flex;
+    justify-content: center;
+}
+
+.box--contribution {
+    width: 600px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    font-size: 1.1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 0 50px 0 50px;
+    box-sizing: border-box;
+}
+
+.box--contribution__text {
+    font-size: 1.1rem;
+    margin-left: 0px;
+    line-height: 1.5rem;
+}
+
+.button--contribution {
+    width: 90%;
+    height: 40px;
+    justify-self: center;
+    position: relative;
+    padding-left: 30px;
+    font-size: 1.1rem;
+}
+
+.button--contribution__text::before {
+    content: url("../icons/caret-circle-right.svg");
+    filter: invert(100%);
+    display: inline-block;
+    transform: scale(0.8);
+    position: absolute;
+    left: 20px;
+    top: 2px;
 }
